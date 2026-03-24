@@ -1,19 +1,14 @@
 # HPC Python Lab
 
-Python on HPC using Jupyter via the TACC Analysis Portal.
+Running Python on HPC using Jupyter via TACC.
 
 ## Guide
 
-**[Read the setup guide](https://ashleyscruse.github.io/hpc-python-gpu/)**
+**[Setup guide](https://ashleyscruse.github.io/hpc-python-gpu/)** — how to launch Jupyter on a TACC compute node from the terminal or the web portal.
 
-The guide walks you through launching a Jupyter notebook on TACC's Vista system.
+## Notebook
 
-## Notebooks
-
-| Session | Notebook | Topic |
-|---------|----------|-------|
-| Tuesday (3/25) | `notebooks/session20_jupyter_on_hpc.ipynb` | Python on HPC: why it matters, heavy compute examples |
-| Thursday (3/27) | `notebooks/session21_gpu_computing.ipynb` | GPU computing in Python |
+`notebooks/jupyter_on_hpc.ipynb` — matrix multiplication, multiprocessing, and large data on HPC.
 
 ## Quick Start (on TACC)
 
@@ -23,4 +18,4 @@ git clone https://github.com/ashleyscruse/hpc-python-gpu.git
 cd hpc-python-gpu
 ```
 
-Then open the notebook in JupyterLab via the Analysis Portal.
+Then open the notebook in Jupyter.
