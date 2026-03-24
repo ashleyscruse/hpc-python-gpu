@@ -34,18 +34,35 @@ Enter your TACC password and MFA token when prompted.
 You're on the login node. **Don't run code here.** Request a dedicated compute node with `idev`:
 
 ```bash
-idev -p gh-dev -N 1 -n 1 -t 01:00:00 -A TRA25001
+idev -N 1 -n 1 -t 01:00:00 -A TRA25001
 ```
 
 | Flag | Meaning |
 |------|---------|
-| `-p gh-dev` | Grace-Hopper dev queue (GPU node) |
 | `-N 1` | 1 node |
 | `-n 1` | 1 task |
 | `-t 01:00:00` | 1 hour time limit |
 | `-A TRA25001` | Our allocation |
 
-Wait for it to start. You'll see your prompt change to something like `c642-022$`. That's your compute node.
+### Reservation Prompt
+
+After running the command, you'll see a list of reservations. It looks something like this:
+
+```
+ => Select RESERVATION,  options are:
+     No  Res_Name            Account  Partition
+      1  ML-TUTORIAL-TUESDAY TRA25001 gh
+
+      2  EXIT  from idev
+      3  CONT. without using reservation
+ => Please type a NUMBER or hit return (default=3):
+```
+
+**Type `1`** to use the class reservation. This puts you on the `gh` queue (Grace-Hopper GPU nodes) and gets you a node quickly.
+
+> If you don't see a reservation, type `3` to continue without one. It will use the default queue.
+
+Wait for it to start. You'll see your prompt change to something like `c642-081[gh]$`. That's your compute node.
 
 ---
 
@@ -140,7 +157,7 @@ Fill in the form on the left side:
 | **System** | `Vista` |
 | **Application** | `Jupyter notebook` |
 | **Project** | `TRA25001` |
-| **Queue** | `gh-dev` |
+| **Queue** | `gh` |
 | **Nodes** | `1` |
 | **Tasks** | `1` |
 | **Job Name** | `hpc-python-lab` |
@@ -210,7 +227,7 @@ Open the notebook from the file browser.
 | Task | Command |
 |------|---------|
 | SSH into Vista | `ssh user@vista.tacc.utexas.edu` |
-| Request compute node | `idev -p gh-dev -N 1 -n 1 -t 01:00:00 -A TRA25001` |
+| Request compute node | `idev -N 1 -n 1 -t 01:00:00 -A TRA25001` (pick reservation if offered) |
 | Start Jupyter | `jupyter notebook --ip=0.0.0.0 --no-browser` |
 | SSH tunnel (new terminal) | `ssh -N -L 8888:NODE:8888 user@vista.tacc.utexas.edu` |
 | Launch via TAP | [tap.tacc.utexas.edu](https://tap.tacc.utexas.edu) |
