@@ -7,6 +7,9 @@ title: HPC Python Lab Guide
 
 Two ways to run Jupyter on TACC's Vista system. Tuesday we do it from the command line. Thursday we use the web portal.
 
+**Lab Guides:**
+- [GPU Computing Lab Setup](gpu-lab) -- modules, packages, and verification for the GPU notebook
+
 ---
 
 # Method 1: Command Line (Tuesday)
