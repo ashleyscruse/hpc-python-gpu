@@ -34,11 +34,12 @@ Enter your TACC password and MFA token when prompted.
 You're on the login node. **Don't run code here.** Request a dedicated compute node with `idev`:
 
 ```bash
-idev -N 1 -n 1 -t 01:00:00 -A TRA25001
+idev -p gh -N 1 -n 1 -t 01:00:00 -A TRA25001
 ```
 
 | Flag | Meaning |
 |------|---------|
+| `-p gh` | Grace-Hopper GPU partition |
 | `-N 1` | 1 node |
 | `-n 1` | 1 task |
 | `-t 01:00:00` | 1 hour time limit |
@@ -183,7 +184,7 @@ This is the easy way. Everything happens in your browser.
 | Task | Command |
 |------|---------|
 | SSH into Vista | `ssh user@vista.tacc.utexas.edu` |
-| Request compute node | `idev -N 1 -n 1 -t 01:00:00 -A TRA25001` (pick reservation if offered) |
+| Request compute node | `idev -p gh -N 1 -n 1 -t 01:00:00 -A TRA25001` (pick reservation if offered) |
 | Start Jupyter | `jupyter notebook --ip=0.0.0.0 --no-browser` |
 | SSH tunnel (new terminal) | `ssh -N -L 8888:NODE:8888 user@vista.tacc.utexas.edu` |
 | Launch via TAP | [tap.tacc.utexas.edu](https://tap.tacc.utexas.edu) |
