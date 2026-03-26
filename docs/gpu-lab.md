@@ -7,11 +7,19 @@ title: GPU Computing Lab Setup
 
 This page covers everything you need to run the GPU computing notebook on TACC's Vista system.
 
+All of the steps below happen inside JupyterLab after you've connected through [TAP](tap-setup).
+
 ---
 
-## Required Modules
+## Step 1: Open a Terminal
 
-Open a terminal in JupyterLab (File > New > Terminal) and load these modules:
+In JupyterLab, go to **File > New > Terminal**. All of the following commands run here.
+
+---
+
+## Step 2: Load Modules
+
+Load these modules:
 
 ```bash
 module load cuda
@@ -23,9 +31,9 @@ These give you access to NVIDIA's CUDA toolkit, the GCC compiler, and Python 3 w
 
 ---
 
-## Required Python Packages
+## Step 3: Install CuPy
 
-After loading the modules, install CuPy (NumPy for the GPU):
+With the modules loaded, install CuPy (NumPy for the GPU):
 
 ```bash
 pip install --user cupy-cuda12x
@@ -45,39 +53,9 @@ The notebook also uses these packages, which are already available on Vista:
 
 ---
 
-## Verify Your Setup
+## Step 4: Get the Notebook
 
-After loading modules and installing CuPy, restart your Jupyter kernel, then run this in a notebook cell:
-
-```python
-import numpy as np
-import cupy as cp
-import matplotlib
-from scipy.ndimage import uniform_filter
-
-print("All imports successful!")
-
-# Check GPU
-gpu_name = !nvidia-smi --query-gpu=name --format=csv,noheader
-print(f"GPU: {gpu_name[0]}")
-
-device = cp.cuda.Device(0)
-mem_free, mem_total = device.mem_info
-print(f"GPU memory: {mem_total / 1e9:.0f} GB total, {mem_free / 1e9:.0f} GB free")
-```
-
-You should see:
-- All imports successful
-- GPU: NVIDIA GH200 120GB
-- ~98 GB of GPU memory
-
-If you don't see a GPU, make sure you launched your job on the `gh` queue.
-
----
-
-## Get the Notebook
-
-Open a terminal in JupyterLab:
+Still in the terminal:
 
 **First time:**
 ```bash
@@ -90,7 +68,18 @@ git clone https://github.com/ashleyscruse/hpc-python-gpu.git
 cd $WORK/hpc-python-gpu && git pull
 ```
 
-Then navigate to `notebooks/` and open `gpu_computing.ipynb`.
+Navigate to `notebooks/` in the file browser and open `gpu_computing.ipynb`.
+
+---
+
+## Step 5: Verify Your Setup
+
+Run the first two cells in the notebook. You should see:
+- All imports successful
+- GPU: NVIDIA GH200 120GB
+- ~98 GB of GPU memory
+
+If you don't see a GPU, make sure you launched your job on the `gh` queue.
 
 ---
 
