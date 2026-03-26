@@ -142,51 +142,7 @@ Then navigate to `notebooks/` in the file browser and open today's notebook.
 
 This is the easy way. Everything happens in your browser.
 
-## Step 1: Go to TAP
-
-Navigate to [tap.tacc.utexas.edu](https://tap.tacc.utexas.edu) and log in with your TACC username, password, and MFA token.
-
----
-
-## Step 2: Submit a Jupyter Job
-
-Fill in the form on the left side:
-
-| Field | What to Enter |
-|-------|--------------|
-| **System** | `Vista` |
-| **Application** | `Jupyter notebook` |
-| **Project** | `TRA25001` |
-| **Queue** | `gh` |
-| **Nodes** | `1` |
-| **Tasks** | `1` |
-| **Job Name** | `hpc-python-lab` |
-| **Time Limit** | `02:00:00` |
-| **Reservation** | Leave blank |
-| **VNC Resolution** | Leave blank |
-
-Click **Submit**.
-
----
-
-## Step 3: Connect
-
-Your job appears under **Current Jobs**. Wait for it to switch from Pending to **Running**, then click **Connect**.
-
-JupyterLab opens in your browser. Done.
-
----
-
-## Step 4: Clone and Open
-
-Same as Tuesday -- open a terminal in JupyterLab:
-
-```bash
-cd $WORK
-git clone https://github.com/ashleyscruse/hpc-python-gpu.git
-```
-
-Open the notebook from the file browser.
+**[Go to the TAP Setup Guide](tap-setup)**
 
 ---
 
