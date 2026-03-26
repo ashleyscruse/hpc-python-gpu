@@ -5,8 +5,6 @@ title: TAP Setup Guide
 
 # TACC Analysis Portal (TAP): Setup Guide
 
-**Session 21 -- Thursday, March 26, 2026**
-
 This guide walks you through launching Jupyter on TACC's Vista system using the web portal. No SSH, no tunnels, just your browser.
 
 ---
@@ -117,4 +115,4 @@ Then restart the kernel.
 **Plots don't show**
 - Run `%matplotlib inline` in a cell before the plot cell.
 
-**Still stuck?** Message me.
+**Still stuck?** Email me.
