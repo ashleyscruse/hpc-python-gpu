@@ -4,7 +4,7 @@ Running Python on HPC using Jupyter via TACC.
 
 ## Guide
 
-**[Setup guide](https://ashleyscruse.github.io/hpc-python-gpu/)** — how to launch Jupyter on a TACC compute node from the terminal or the web portal.
+**[Setup guide](https://morehouse-supercomputing.github.io/hpc-python-gpu/)** — how to launch Jupyter on a TACC compute node from the terminal or the web portal.
 
 ## Notebook
 
@@ -14,7 +14,7 @@ Running Python on HPC using Jupyter via TACC.
 
 ```bash
 cd $WORK
-git clone https://github.com/ashleyscruse/hpc-python-gpu.git
+git clone https://github.com/morehouse-supercomputing/hpc-python-gpu.git
 cd hpc-python-gpu
 ```
 

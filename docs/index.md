@@ -122,7 +122,7 @@ In JupyterLab, open a terminal (File > New > Terminal):
 
 ```bash
 cd $WORK
-git clone https://github.com/ashleyscruse/hpc-python-gpu.git
+git clone https://github.com/morehouse-supercomputing/hpc-python-gpu.git
 cd hpc-python-gpu
 ```
 
@@ -191,5 +191,5 @@ This is the easy way. Everything happens in your browser.
 | Start Jupyter | `jupyter notebook --ip=0.0.0.0 --no-browser` |
 | SSH tunnel (new terminal) | `ssh -N -L 8888:NODE:8888 user@vista.tacc.utexas.edu` |
 | Launch via TAP | [tap.tacc.utexas.edu](https://tap.tacc.utexas.edu) |
-| Clone repo | `cd $WORK && git clone https://github.com/ashleyscruse/hpc-python-gpu.git` |
+| Clone repo | `cd $WORK && git clone https://github.com/morehouse-supercomputing/hpc-python-gpu.git` |
 | Check your node | `hostname` |

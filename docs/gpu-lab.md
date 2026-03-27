@@ -23,7 +23,7 @@ cd $WORK/hpc-python-gpu && git pull
 **First time:**
 ```bash
 cd $WORK
-git clone https://github.com/ashleyscruse/hpc-python-gpu.git
+git clone https://github.com/morehouse-supercomputing/hpc-python-gpu.git
 ```
 
 Then close the terminal. In the file browser on the left, navigate to `notebooks/` and open `gpu_computing.ipynb`.
